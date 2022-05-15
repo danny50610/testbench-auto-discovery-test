@@ -1,0 +1,31 @@
+{
+    "name": "danny50610/testbench-auto-discovery-test",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Danny50610\\TestbenchAutoDiscoveryTest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Danny50610\\TestbenchAutoDiscoveryTest\\Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Chan, Danny",
+            "email": "danny50610@yahoo.com.tw"
+        }
+    ],
+    "require": {
+        "silber/bouncer": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.5",
+        "nunomaduro/larastan": "^2.1",
+        "nunomaduro/collision": "^6.2"
+    },
+    "post-autoload-dump": [
+        "@php ./vendor/bin/testbench package:discover --ansi"
+    ]
+}
